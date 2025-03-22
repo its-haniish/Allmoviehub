@@ -151,7 +151,7 @@ app.get("/:slug", async (req, res) => {
 
 
 // Start the server
-mongoose.connect(process.env.VPS_URI).then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("Connected to the database.");
     app.listen(PORT, () => {
         console.log(`The server is live at: http://localhost:${PORT}`);
